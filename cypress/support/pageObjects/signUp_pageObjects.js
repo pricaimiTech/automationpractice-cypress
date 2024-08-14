@@ -1,5 +1,6 @@
-import { signUp } from "../elementos/signUp_elements";
+import { signUp, signIn } from "../elementos/signUp.elements";
 import { generateEmail} from '../../support/utils/generateEmail'
+import { accountcreated } from "../../support/elementos/myaccount";
 
 class SignUp {
 
@@ -21,6 +22,13 @@ class SignUp {
         cy.get(signUp.selectMonths).select('March')
         cy.get(signUp.selectYears).select('1993')
         cy.get(signUp.buttonSubmit).click()       
+    }
+
+    loginAccount(email, password){
+        cy.get(signIn.inputEmail).type(email)
+        cy.get(signUp.inputPassword).type(password)
+        cy.get(signIn.btnSignIn).click()
+        cy.get(accountcreated.pageHeader).contains("My account")
     }
 }
 
