@@ -48,10 +48,10 @@ yarn run cypress open
 
 ### Testes criados
 
-- Adicioanr texto
-- Concluir Item
-- Filtrar item
-- Deletar Item
+- Criar cadastro
+- Realizar login
+- Preencher dados do endereço
+- Adicionar produto ao carrinho
 
 
 ### Reports
