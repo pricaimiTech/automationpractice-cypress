@@ -4,3 +4,7 @@ export const productPage = {
     addCard: 'p[id=add_to_cart]',
     labelAddSucessfully: 'div[id=layer_cart]'
 }
+
+export const canvaProduct = {
+    btnProceedCheckout :'a[title="Proceed to checkout"]'
+}

@@ -1,4 +1,4 @@
-import { productPage } from "../elementos/product.elements";
+import { productPage, canvaProduct } from "../elementos/product.elements";
 
 class ProductPage {
     visitProductPage() {
@@ -33,6 +33,25 @@ class ProductPage {
             .first()
             .next()
             .contains('Product successfully added to your shopping cart');
+    }
+
+    addProductInCart(spanText, textLabel){
+        if (spanText === textLabel) {
+            console.log("Product wasn't in stock");
+            this.addToCart();
+            this.validateProductAddedToCart();
+          } else {
+            console.log("Product was in stock");
+            this.selectNextAvailableProduct();
+            this.addToCart();
+            this.validateProductAddedToCart();
+            this.proceedToCheckout()
+          }
+    }
+
+    proceedToCheckout(){
+        cy.get(canvaProduct.btnProceedCheckout)
+        .click()
     }
 }
 

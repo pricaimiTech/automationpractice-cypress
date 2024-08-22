@@ -14,7 +14,12 @@ class AdressForm {
         cy.get(adressForm.mobilePhone).type(adressFormDate.homePhone)
         cy.get(adressForm.additionalInformation).type(adressFormDate.additionInformation)
         cy.get(adressForm.assignAdress).type(adressFormDate.alias)
-        // cy.get(adressForm.btnSubmitAdress).click()
+        cy.get(adressForm.btnSubmitAdress).click()
+    }
+
+    btnGoCheckoutAdress(){
+        cy.get("button[name='processAddress']")
+        .click()
     }
 }
 

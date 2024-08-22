@@ -1,15 +1,18 @@
 import { signUp, signIn } from "../elementos/signUp.elements";
 import { generateEmail} from '../../support/utils/generateEmail'
 import { accountcreated } from "../../support/elementos/myaccount";
+import header_pageObjects from "../../support/pageObjects/header_pageObjects";
+
+let email;
 
 class SignUp {
 
-    createanaccount(){
-        const email= generateEmail()
+    createanaccount() {
+        email = generateEmail()
         console.log(`clara-teganhe+${email}+@tuamaeaquelaursa.com`)
         cy.get(signUp.inputEmailAdress).type(email)
         cy.get(signUp.buttonSubmitCreate).click()
-        // return email
+        return email
     }
 
     formCreateAccount(email){
@@ -35,9 +38,11 @@ class SignUp {
      * @description neste método nós chamamos duas funções da mesma classe por isso tem o this.
      */
     createNewAccount(){
+        header_pageObjects.signIn()
         this.createanaccount()
         this.formCreateAccount()
         cy.get(accountcreated.mensagem).invoke("text").should("contains","Your account has been created." )
+        return email
     }
 }
 
