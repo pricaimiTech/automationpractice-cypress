@@ -1,6 +1,6 @@
-import signUp_pageObjects from "../../support/pageObjects/signUp_pageObjects";
-import header_pageObjects from "../../support/pageObjects/header_pageObjects";
-import { accountcreated } from "../../support/elementos/myaccount";
+import signUp_pageObjects from "../../../support/pageObjects/signUp_pageObjects";
+import header_pageObjects from "../../../support/pageObjects/header_pageObjects";
+import { accountcreated } from "../../../support/elementos/myaccount";
 
 
 describe('Create a account', () => {

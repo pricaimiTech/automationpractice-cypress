@@ -1,7 +1,7 @@
-import { email, password } from "../../../environment/stg";
-import header_pageObjects from "../../support/pageObjects/header_pageObjects";
-import signUp_pageObjects from "../../support/pageObjects/signUp_pageObjects";
-import yourAdressPageObjects from "../../support/pageObjects/yourAdress.pageObjects";
+import { email, password } from "../../../../environment/stg";
+import header_pageObjects from "../../../support/pageObjects/header_pageObjects";
+import signUp_pageObjects from "../../../support/pageObjects/signUp_pageObjects";
+import yourAdressPageObjects from "../../../support/pageObjects/yourAdress.pageObjects";
 
 describe('Sign In', () => {
   beforeEach('passes', () => {

@@ -1,7 +1,7 @@
-import { email, password } from "../../../environment/stg";
-import { header } from "../../support/elementos/header.elements";
-import header_pageObjects from "../../support/pageObjects/header_pageObjects";
-import signUp_pageObjects from "../../support/pageObjects/signUp_pageObjects";
+import { email, password } from "../../../../environment/stg";
+import { header } from "../../../support/elementos/header.elements";
+import header_pageObjects from "../../../support/pageObjects/header_pageObjects";
+import signUp_pageObjects from "../../../support/pageObjects/signUp_pageObjects";
 
 describe('Sign In', () => {
   before('passes', () => {

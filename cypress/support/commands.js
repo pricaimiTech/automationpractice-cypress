@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import signUp_pageObjects from "../support/pageObjects/signUp_pageObjects";
+import header_pageObjects from "../support/pageObjects/header_pageObjects";
+
+Cypress.Commands.add('login', (email, password) => {
+    header_pageObjects.signIn()
+    signUp_pageObjects.loginAccount(email, password)
+})

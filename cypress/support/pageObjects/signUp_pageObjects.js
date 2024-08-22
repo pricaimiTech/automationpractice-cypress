@@ -30,6 +30,15 @@ class SignUp {
         cy.get(signIn.btnSignIn).click()
         cy.get(accountcreated.pageHeader).contains("My account")
     }
+
+    /**
+     * @description neste método nós chamamos duas funções da mesma classe por isso tem o this.
+     */
+    createNewAccount(){
+        this.createanaccount()
+        this.formCreateAccount()
+        cy.get(accountcreated.mensagem).invoke("text").should("contains","Your account has been created." )
+    }
 }
 
 export default new SignUp();
